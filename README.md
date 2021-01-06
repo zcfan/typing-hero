@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+# Typing Hero
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+最近心血来潮学了下双拼，为了方便练习找了几个工具但是都有各种不满意的地方，就想着自己搞一个玩着。
 
-## Available Scripts
+试过的工具里，最接近我期望的是这个：https://github.com/garfeng/xnhe
 
-In the project directory, you can run:
+它虽然自称小鹤双拼练习，但其实跟小鹤半毛钱关系都没有，任何输入法只要打对中文字就能过关。不过这其实也是一条很不错的思路，可以尽可能泛化工具的用途。它的不足是：
 
-### `yarn start`
+- 全是单字练习，不贴合真实打字场景
+- 同音字很多，而且是单字，需要频繁选字，非常影响节奏
+- 同一个字连续出现的频率很高，只有第一个需要记忆唤起，后面的都是机械重复，造成练习效果指标虚高
+- 无法自定义练习语料
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+简单几个里程碑：
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] 语料包、语料投喂和正误裁判三个核心功能搞了，能先凑合用着，不然等写完我都已经练熟了……
+- [ ] 练习效果、基于练习效果改进的语料投喂算法
+- [ ] 丰富语料种类
