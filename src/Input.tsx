@@ -1,5 +1,13 @@
-export default function Input() {
+import { ChangeEvent } from "react";
+
+interface InputProps {
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
+}
+
+export default function Input({
+  onChange
+}: InputProps) {
   return (
-    <input placeholder="请输入上面的文本" />
+    <input onChange={onChange} placeholder="请输入上面的文本" />
   )
 }
