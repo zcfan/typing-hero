@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+
+const inputFilePath = process.argv[2];
+const contents = fs.readFileSync(inputFilePath, {
+  encoding: 'utf-8'
+})
+
+const lines = contents.split('\n')
+const words = lines.map(line => {
+  const pair = line.split(' 	 ')
+  pair[1] = parseInt(pair[1], 10)
+  return pair
+})
+
+const outputPath = './' + path.basename(inputFilePath, '.txt') + '.json'
+fs.writeFileSync(outputPath, JSON.stringify(words, null, 2))
