@@ -1,7 +1,7 @@
 import Sample from './Sample'
 import Input from './Input'
 import wordEmiter from './wordEmiter'
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState } from 'react'
 
 function App() {
   const [word, setWord] = useState(wordEmiter())
